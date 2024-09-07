@@ -22,6 +22,16 @@ h1.title {
   display: block;
   float: left; }
 
+button {
+  color: white;
+  background: #bbada0;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 220px;
+}
+
 @-webkit-keyframes move-up {
   0% {
     top: 25px;
@@ -656,7 +666,7 @@ hr {
     box-shadow: 0 0 30px 10px rgba(255, 81, 255, 1.0), inset 0 0 0 1px rgba(255, 255, 255, 0.33333);
     font-size: 11px; }
     @media screen and (max-width: 480px) {
-      .tile.tile-281474976710656 .tile-inner, .tile.tile-20365011074 .tile-inner, .tile.tile-211106232532992‬‬‬ .tile-inner {
+      .tile.tile-281474976710656 .tile-inner, .tile.tile-20365011074 .tile-inner, .tile.tile-211106232532992 .tile-inner {
         font-size: 5px; } }
   .tile.tile-562949953421312 .tile-inner, .tile.tile-32951280099 .tile-inner, .tile.tile-422212465065984 .tile-inner {
     color: #f9f6f2;
