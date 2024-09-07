@@ -11,40 +11,50 @@ var cnt = 0;
 var mover = undefined;
 
 function doMovementPattern(moveType) {
-  mover = setInterval(moveType, 1);
+  if (typeof(mover) != 'undefined') {
+    clearInterval(mover);
+  }
+  mover = setInterval(moveType, 20);
 }
 
 function stopMovement() {
   mover = clearInterval(mover);
 }
 
-function auto() {
+function corner() {
+  if (game == null || typeof(game) === "undefined") {
+    return;
+  }
   var item = document.getElementById('tile-container');
-    if (++cnt > 1) {
+    if (++cnt > 0) {
       dir = 1 - dir;
       cnt = 0;
     }
   if (0 === dir) {
     game.move(0);
-    game.move(3);
+    setTimeout(function() {game.move(3)}, 25);
   } else {
     game.move(0);
-    game.move(1);
+    setTimeout(function() {game.move(1)}, 25);
   }
 }
 
 function swing() {
-  var item = document.getElementById('tile-container');
-    if (++cnt > 1) {
+  if (game == null || typeof(game) === "undefined") {
+    return;
+  }
+  var item = document.getElementById('tile-container'); {
+    if (++cnt > 0) {
       dir = 1 - dir;
       cnt = 0;
     }
+  }
   if (0 === dir) {
     game.move(0);
-    game.move(2);
+    setTimeout(function() {game.move(2)}, 25);
   } else {
     game.move(1);
-    game.move(3);
+    setTimeout(function() {game.move(3)}, 25);
   }
 }
 
